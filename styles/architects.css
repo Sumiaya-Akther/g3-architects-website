@@ -17,7 +17,7 @@
 
   .navbar, .banner,
   .feature, .some-facts,
-  .sponspors, footer{
+  .sponspors, .badge, footer{
      max-width: 1440px;
      margin: 0 auto;
  }
@@ -26,9 +26,6 @@
     background-color: rgba(255, 144, 14, 0.1);
 }
 
-section{
-    margin-top: 130px;
-}
 .btn-primary{
     background-color: #ff900e;
     color: white;
@@ -66,6 +63,7 @@ section{
 
 .banner{
     text-align: center;
+    margin-top: 130px;
 }
 .banner-description h1{
     font-size: 4rem;
@@ -88,6 +86,7 @@ section{
 
 .feature{
     padding: 80px;
+    margin-top: 130px;
 }
 .feature-title {
     color: rgba(114, 114, 114, 1);
@@ -118,7 +117,63 @@ section{
     margin-bottom: 20px;
 }
 
+/* badge css */
+
+.badge{
+    display: flex;
+    gap: 165px;
+    margin-top: 130px;
+}
+
+.badge h3{
+    border-left: 5px solid #ff900e;
+    padding-left: 20px;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.badge p{
+    font-size: 1rem;
+    color: #424242;
+    margin-bottom: 20px;
+    max-width: 542px;
+}
+.badge-card{
+    /* width: 500px; */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+}
+.badge-card h4{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.badge-card p{
+    font-size: 1rem;
+    color: #424242;
+    margin-bottom: 20px;
+    max-width: 542px;
+}
+.badge img{
+    width: 100%;
+}
+#badge-experience{
+    padding: 45px 42px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+#experience-year{
+    font-size: 4rem;
+    font-weight: 700;
+}
 /* some facts css */
+.some-facts{
+    margin-top: 130px;
+}
 
 .some-facts h3{
     font-size: 2.8rem;
@@ -149,6 +204,9 @@ section{
     gap: 10px;
 }
 /* sponspors css */
+.sponspors{
+    margin-top: 130px;
+}
 
 .sponspors-description h3{
     font-size: 2.8rem;
@@ -182,7 +240,6 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
     
 
@@ -193,7 +250,7 @@ footer{
 @media screen and (max-width: 576px) {
     .navbar,
     .nav-links, 
-    .feature{
+    .feature, .badge{
         flex-direction: column;
     }
 
@@ -207,6 +264,10 @@ footer{
         margin-top: 50px;
         margin-left: 0px;
     }
+    #badge-experience{
+        margin-left: 0px;
+        margin-top: 0px;
+    }
 }
 
 
@@ -214,7 +275,7 @@ footer{
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
     
-    .feature{
+    .feature, .badge{
         flex-direction: column;
     }
 
@@ -222,8 +283,13 @@ footer{
         margin: 50px auto;
         
     }
-    .fact-box, .sponsors-icon{
+    .fact-box, .sponsors-icon, .badge-card{
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
     }
+    #badge-experience{
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    
 }
