@@ -15,6 +15,13 @@
       "wdth" 100;
   }
 
+  .navbar, .banner,
+  .feature, .some-facts,
+  .sponspors, footer{
+     max-width: 1440px;
+     margin: 0 auto;
+ }
+
 .bg-light{
     background-color: rgba(255, 144, 14, 0.1);
 }
@@ -54,12 +61,7 @@ section{
     font-size: 1.2rem;
     color: #424242;
 }
-.navbar, .banner,
- .feature, .some-facts,
- .sponspors{
-    max-width: 1440px;
-    margin: 0 auto;
-}
+
 /* banner css */
 
 .banner{
@@ -160,6 +162,30 @@ section{
     margin-bottom: 20px;
     text-align: center;
 }
+.sponsors-icon{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 60px;
+    margin-top: 80px;
+}
+
+.sponsors-icon{
+    filter: grayscale(100%);
+}
+
+/* footer css */
+footer{
+    background-color: rgba(255, 144, 14, 0.1);
+    height: 100px;
+    margin-top: 130px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+    
+
 /* responsive css */
 
 /* mobile device */
@@ -171,10 +197,10 @@ section{
         flex-direction: column;
     }
 
-    .feature-img, .fact-box{
+    .feature-img, .fact-box, .sponsors-icon{
         grid-template-columns: repeat(1, 1fr);
     }
-    .fact-box{
+    .fact-box, .sponsors-icon{
         justify-items: center;
     }
     .feature-description{
@@ -196,7 +222,7 @@ section{
         margin: 50px auto;
         
     }
-    .fact-box{
+    .fact-box, .sponsors-icon{
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
     }
