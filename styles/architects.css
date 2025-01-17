@@ -54,7 +54,9 @@ section{
     font-size: 1.2rem;
     color: #424242;
 }
-.navbar, .banner, .feature{
+.navbar, .banner,
+ .feature, .some-facts,
+ .sponspors{
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -85,9 +87,9 @@ section{
 .feature{
     padding: 80px;
 }
-.feature-title{
+.feature-title {
     color: rgba(114, 114, 114, 1);
-    font-family: 3rem;
+    font-family: 2.8rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -114,7 +116,54 @@ section{
     margin-bottom: 20px;
 }
 
+/* some facts css */
+
+.some-facts h3{
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.some-facts p{
+    font-size: 1rem;
+    color: #424242;
+    margin-bottom: 20px;
+    max-width: 542px;
+}
+.fact-box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 50px;
+}
+.box-1{
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ff900e;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+/* sponspors css */
+
+.sponspors-description h3{
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.sponspors-description p{
+    font-size: 1rem;
+    color: #424242;
+    margin-bottom: 20px;
+    text-align: center;
+}
 /* responsive css */
+
+/* mobile device */
+
 @media screen and (max-width: 576px) {
     .navbar,
     .nav-links, 
@@ -122,8 +171,11 @@ section{
         flex-direction: column;
     }
 
-    .feature-img{
+    .feature-img, .fact-box{
         grid-template-columns: repeat(1, 1fr);
+    }
+    .fact-box{
+        justify-items: center;
     }
     .feature-description{
         margin-top: 50px;
@@ -143,5 +195,9 @@ section{
     .feature-description{
         margin: 50px auto;
         
+    }
+    .fact-box{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
     }
 }
