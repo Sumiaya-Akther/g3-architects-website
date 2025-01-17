@@ -19,6 +19,9 @@
     background-color: rgba(255, 144, 14, 0.1);
 }
 
+section{
+    margin-top: 130px;
+}
 .btn-primary{
     background-color: #ff900e;
     color: white;
@@ -51,7 +54,7 @@
     font-size: 1.2rem;
     color: #424242;
 }
-.navbar, .banner{
+.navbar, .banner, .feature{
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -75,11 +78,70 @@
 }
 .banner-img{
     width: 100%;
+    margin-bottom: 20px;
+}
+/* our feature css */
+
+.feature{
+    padding: 80px;
+}
+.feature-title{
+    color: rgba(114, 114, 114, 1);
+    font-family: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.feature-title-1{
+    color: #131313;
+}
+.feature-title-span{
+    color: #ff900e;
+
+}
+.feature-img{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.feature-description{
+    max-width: 537px;
+    margin-left: 80px;
+}
+.feature-description p{
+    font-size: 1rem;
+    color: #424242;
+    margin-bottom: 20px;
 }
 
 /* responsive css */
 @media screen and (max-width: 576px) {
-    .navbar, .nav-links{
+    .navbar,
+    .nav-links, 
+    .feature{
         flex-direction: column;
+    }
+
+    .feature-img{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .feature-description{
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+}
+
+
+/* medium device */
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    
+    .feature{
+        flex-direction: column;
+    }
+
+    .feature-description{
+        margin: 50px auto;
+        
     }
 }
